@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "name": "jsworkshop-kata-mocha-chai-sinon",
+  "description": "JS workshop test coding kata with Mocha, Chai and Sinon",
+  "keywords": [
+    "mocha",
+    "chai",
+    "sinon",
+    "testing"
+  ],
+  "homepage": "https://github.com/jadu/jsworkshop-kata-mocha-chai-sinon",
+  "author": "Dan Phillimore <daniel.phillimore@jadu.co.uk> (http://jadu.net)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jadu/jsworkshop-kata-mocha-chai-sinon"
+  },
+  "bugs": {
+    "email": "daniel.phillimore@jadu.co.uk",
+    "url": "https://github.com/jadu/jsworkshop-kata-mocha-chai-sinon/issues"
+  },
+  "main": "index",
+  "scripts": {
+    "build": "mkdir -p dist && browserify index --outfile dist/bundle.js",
+    "jshint": "jshint .",
+    "mocha": "mochify --recursive test/",
+    "test": "npm run jshint && npm run mocha"
+  },
+  "dependencies": {
+    "lodash": "^3.10.0",
+    "phpcommon": "~1.2",
+    "transpiler": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "mochify": "^2.13.0",
+    "nowdoc": "^1.0.0",
+    "sinon": "~1.15",
+    "sinon-chai": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
+  "license": "MIT"
+}
