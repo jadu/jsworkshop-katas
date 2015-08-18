@@ -34,6 +34,7 @@ describe('AddListener', function () {
             this.addButton.click();
 
             expect(this.resultField.value).to.equal('8');
+
         });
 
         it('should display 20 when 2 is added to 18', function () {
@@ -45,6 +46,16 @@ describe('AddListener', function () {
             this.addButton.click();
 
             expect(this.resultField.value).to.equal('20');
+        });
+
+        it('should be empty when the add button hasn\'t been clicked yet', function () {
+            this.numberField1.value = 2;
+            this.numberField2.value = 18;
+            this.adder.add.withArgs(2, 18).returns(20);
+
+            this.listener.listenTo(this.document);
+
+            expect(this.resultField.value).to.equal('');
         });
     });
 });

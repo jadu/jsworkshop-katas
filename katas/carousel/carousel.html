@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    ol li
+    {
+        width:      150px;
+        position:   absolute;
+        background: green;
+        height:     150px;
+    }
+
+    ol
+    {
+        width:      400px;
+        height:     150px;
+        position:   relative;
+        background: blue;
+        margin:     0;
+        padding:    0;
+        list-style: none;
+        overflow:   hidden;
+    }
+</style>
+<button id="previousButton">Previous</button>
+<button id="nextButton">Next</button>
+<ol id="container">
+    <li id="slide1">
+        slide 1
+    </li>
+    <li id="slide2">
+        slide 2
+    </li>
+    <li id="slide3">
+        slide 3
+    </li>
+</ol>
+<script src="dist/bundle.js"></script>
+</body>
+</html>

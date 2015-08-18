@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "jsworkshop-kata-mocha-chai-sinon",
+  "name": "jsworkshop-kata-accordion",
   "description": "JS workshop test coding kata with Mocha, Chai and Sinon",
   "keywords": [
     "mocha",
@@ -22,20 +22,18 @@
   "scripts": {
     "build": "mkdir -p dist && browserify index --outfile dist/bundle.js",
     "jshint": "jshint .",
-    "mocha": "mochify --recursive test/",
+    "mocha": "mochify --reporter spec --recursive test/",
     "test": "npm run jshint && npm run mocha"
   },
   "dependencies": {
-    "lodash": "^3.10.0",
-    "phpcommon": "~1.2",
-    "transpiler": "^1.0.0"
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.0"
   },
   "devDependencies": {
     "chai": "^2.3.0",
     "jshint": "^2.8.0",
     "mocha": "^2.2.5",
     "mochify": "^2.13.0",
-    "nowdoc": "^1.0.0",
     "sinon": "~1.15",
     "sinon-chai": "^2.7.0"
   },

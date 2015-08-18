@@ -5,19 +5,16 @@ function AddListener(adder) {
 }
 
 AddListener.prototype.listenTo = function (document) {
-    var listener = this,
-        numberField1 = document.getElementById('number1'),
-        numberField2 = document.getElementById('number2'),
-        resultField = document.getElementById('result'),
-        addButton = document.getElementById('add');
+    var self = this;
 
-    addButton.addEventListener('click', function () {
-        var number1 = parseFloat(numberField1.value),
-            number2 = parseFloat(numberField2.value),
-            result = listener.adder.add(number1, number2);
+    document.getElementById('add').addEventListener('click',function(){
+        var number1 = document.getElementById('number1'),
+            number2 = document.getElementById('number2'),
+            result = document.getElementById('result');
 
-        resultField.value = result;
+        result.value = self.adder.add(parseFloat(number1.value), parseFloat(number2.value));
     });
+
 };
 
 module.exports = AddListener;
